@@ -37,7 +37,7 @@ export default async function Home() {
           audios, and more, all dedicated to furthering sustainability efforts.
         </p>
       </blockquote>
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid sm:grid-cols-4 gap-4">
         <Link href={"brands"}>
           <Card>
             <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
