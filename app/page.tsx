@@ -1,15 +1,4 @@
-import { LandingHeader } from "@/components/home-page-header";
-import Image from "next/image";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import DashboardCard from "@/components/dashboard/dashboard-card";
 import { BASE_API_URL } from "@/constants/constants";
 import { DASHBOARD_HOME_ENDPOINT } from "@/constants/routes";
 
@@ -24,7 +13,7 @@ export default async function Home() {
     }
   );
 
-  const dashboardHomeResponse = await dashboardHomeApiResponse.json();
+  const dashboardHomeResponse: DashboardResponse = await dashboardHomeApiResponse.json();
 
   return (
     <div className="flex flex-col my-6 mx-12">
@@ -38,26 +27,7 @@ export default async function Home() {
         </p>
       </blockquote>
       <div className="grid sm:grid-cols-4 gap-4">
-        <Link href={"brands"}>
-          <Card>
-            <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-              <CardTitle className="text-sm font-medium">
-                Sustainable Brands
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="text-2xl font-bold">
-                {dashboardHomeResponse.brands} Brands
-              </div>
-              <p className="text-xs text-[#008000] text-muted-foreground">
-                {dashboardHomeResponse.new_brands_last_week} added last week
-              </p>
-              <Link href={"/brands/new-submission"}>
-                <Button className="mt-4">Make a submission</Button>
-              </Link>
-            </CardContent>
-          </Card>
-        </Link>
+        <DashboardCard data={dashboardHomeResponse}/>
       </div>
     </div>
   );

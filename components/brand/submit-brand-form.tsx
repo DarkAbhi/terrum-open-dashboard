@@ -55,13 +55,27 @@ export default function SubmitBrandForm({
     );
     setIsLoading(false);
     if (!apiResponse.error) {
+      toast({
+        variant: "default",
+        title:
+          "Thanks for your contribution to our brand database! Your input helps enrich our open source community.",
+      });
       router.push("/brands");
       router.refresh();
     } else {
-      toast({
-        variant: "destructive",
-        title: "An unexpected error occured.",
-      });
+      if (apiResponse.error) {
+        toast({
+          variant: "destructive",
+          title: apiResponse.error,
+          description:
+            "Thank you for your submission! Unfortunately, this brand already exists on our platform. Your willingness to help is valued.",
+        });
+      } else {
+        toast({
+          variant: "destructive",
+          title: "An unexpected error occured.",
+        });
+      }
     }
   }
 
