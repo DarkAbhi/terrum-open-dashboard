@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LandingHeader } from "@/components/home-page-header";
-import { SiteFooter } from "@/components/site-footer";
 import { Toaster } from "@/components/ui/toaster";
+import SiteFooter from "@/components/site-footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -26,7 +26,7 @@ export default function RootLayout({
           <main className="flex min-h-screen flex-col">
             <LandingHeader />
             <div className="flex-grow">{children}</div>
-            <SiteFooter className="border-t" />
+            <SiteFooter/>
           </main>
           <Toaster />
         </ThemeProvider>
