@@ -22,8 +22,11 @@ export function CommandMenuWrapper() {
     <>
       <div className="flex justify-center mt-5">
         <Button
+          data-umami-event="Get Started"
           className="bg-blue-500 hover:bg-blue-600 dark:bg-purple-700 dark:hover:bg-purple-800"
-          onClick={() => {setOpen(true)}}
+          onClick={() => {
+            setOpen(true);
+          }}
         >
           Get Started
         </Button>
