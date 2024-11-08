@@ -14,10 +14,10 @@ export default function Home() {
         <BlurFade delay={0.25 * 0.05} inView>
           <div className="flex justify-center mt-5 flex-col">
             <p className="text-xl text-gray-500 mb-8 max-w-3xl mx-auto text-center">
-              At Terrum, we're building a comprehensive open database to empower
-              individuals and communities to make sustainable choices with ease.
-              Discover companies, brands, local businesses, and more—all
-              committed to creating a greener planet. Join us in making
+              At Terrum, we&apos;re building a comprehensive open database to
+              empower individuals and communities to make sustainable choices
+              with ease. Discover companies, brands, local businesses, and
+              more—all committed to creating a greener planet. Join us in making
               sustainability a shared journey.
             </p>
             <CommandMenuWrapper />
