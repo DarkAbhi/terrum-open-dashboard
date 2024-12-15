@@ -2,7 +2,7 @@
  * The endpoint to perform operations with brands.
  * @constant
  */
-export const BRANDS_ENDPOINT = "/public-content/brands";
+export const BRANDS_ENDPOINT = "/cms/brands-with-categories/";
 
 export const SUBMIT_BRAND_ENDPOINT = "/public-content/brands/new-submission/";
 
